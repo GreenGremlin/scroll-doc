@@ -1,12 +1,12 @@
-const win = window || {};
-const doc = document || { documentElement: {} };
+var win = window || {};
+var doc = document || { documentElement: {} };
 // IE < 9 & Node
-let scrollElem = typeof win.pageYOffset === 'undefined' ?
+var scrollElem = typeof win.pageYOffset === 'undefined' ?
   doc.documentElement :
   null;
 
 function detectScrollElem() {
-  const startScrollTop = window.pageYOffset;
+  var startScrollTop = window.pageYOffset;
   document.documentElement.scrollTop = startScrollTop + 1;
   if (window.pageYOffset > startScrollTop) {
     document.documentElement.scrollTop = startScrollTop;
@@ -17,6 +17,6 @@ function detectScrollElem() {
   return document.body;
 }
 
-export default function scrollDoc() {
+module.exports.default = function scrollDoc() {
   return scrollElem || (scrollElem = detectScrollElem());
 }
