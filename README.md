@@ -1,4 +1,4 @@
-# scroll-doc
+# scrollDoc
 Feature detected access to the scroller element
 
 ``` javascript
