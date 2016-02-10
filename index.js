@@ -17,6 +17,6 @@ function detectScrollElem() {
   return document.body;
 }
 
-module.exports.default = function scrollDoc() {
+module.exports = function scrollDoc() {
   return scrollElem || (scrollElem = detectScrollElem());
 }
