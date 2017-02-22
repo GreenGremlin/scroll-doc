@@ -1,5 +1,5 @@
-var win = window || {};
-var doc = document || { documentElement: {} };
+var win = typeof window !== 'undefined' ? window : {};
+var doc = typeof document !== 'undefined' ? document : { documentElement: {} };
 // IE < 9 & Node
 var scrollElem = typeof win.pageYOffset === 'undefined' ?
   doc.documentElement :
