@@ -14,7 +14,7 @@ function detectScrollElem() {
     return document.documentElement;
   }
   // Chrome (non-standard)
-  return document.body;
+  return document.scrollingElement || document.body;
 }
 
 module.exports = function scrollDoc() {
