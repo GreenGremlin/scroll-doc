@@ -6,9 +6,9 @@ var scrollElem = typeof win.pageYOffset === 'undefined' ?
   null;
 
 function detectScrollElem() {
-  var startScrollTop = window.pageYOffset;
+  var startScrollTop = win.pageYOffset;
   document.documentElement.scrollTop = startScrollTop + 1;
-  if (window.pageYOffset > startScrollTop) {
+  if (win.pageYOffset > startScrollTop) {
     document.documentElement.scrollTop = startScrollTop;
     // IE > 9 & FF (standard)
     return document.documentElement;
